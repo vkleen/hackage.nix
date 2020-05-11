@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = { debug = false; };
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Peter France";
       homepage = "";
       url = "";
-      synopsis = "Bindings for GEOS.";
+      synopsis = "Bindings for GEOS.          ";
       description = "This is a Haskell binding to Geos, the open-source geometry library, which includes geometry types, predicate functions and other operations, spatially indexed geometries, and parsers for WKB and WKT formats.";
       buildType = "Simple";
       };

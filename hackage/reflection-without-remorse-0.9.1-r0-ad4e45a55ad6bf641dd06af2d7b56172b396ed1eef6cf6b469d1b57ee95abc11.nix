@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Atze van der Ploeg";
       homepage = "https://github.com/atzeus/reflection-without-remorse";
       url = "";
-      synopsis = "Efficient free and operational monads.";
+      synopsis = "Efficient free and operational monads. ";
       description = "Free and operational monads that efficiently support alternating between building and observing.";
       buildType = "Simple";
       };

@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Deain Stefan, David Mazieres, Alejandro Russo";
       homepage = "";
       url = "";
-      synopsis = "Dynamic labels to assign confidentiality and integrity levels in scenarios of mutual distrust";
+      synopsis = "Dynamic labels to assign confidentiality and integrity levels in scenarios of mutual distrust ";
       description = "s A package that provides dynamic labels in the form of conjunctions of disjunctions of principals. This package is intended to only be used at the computer science school ECI 2011 (Buenos Aires, Argentina) <http://www.dc.uba.ar/events/eci/2011/index_html>. Please, refer to the official release of dclabels if you plan to use it for other purposes.";
       buildType = "Simple";
       };

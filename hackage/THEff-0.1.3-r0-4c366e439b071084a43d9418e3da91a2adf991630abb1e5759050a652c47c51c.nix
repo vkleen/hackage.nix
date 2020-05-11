@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Kolodezny Diver";
       homepage = "";
       url = "";
-      synopsis = "TH implementation of effects.";
+      synopsis = "TH implementation of effects. ";
       description = "This package implements effects, as alternative to monad\ntransformers. Actually, the effects themselves are created without\nthe use of TH, but the binding of nested effects described by\nmkEff splice. For example.\n\n> mkEff \"MyReader\"    ''Reader    ''Int       ''Lift\n> mkEff \"SomeState\"   ''State     ''Bool      ''MyReader\n> mkEff \"OtherRdr\"    ''Reader    ''Float     ''SomeState\n>\n> main:: IO ()\n> main = do\n>     r <- runMyReader  100\n>        \$ runSomeState False\n>        \$ runOtherRdr  pi  \$ do\n>             i :: Int   <- ask                    -- MyReader\n>             f :: Float <- ask                    -- OtherRdr\n>             b <- get                             -- SomeState\n>             put \$ not b                          -- SomeState\n>             lift \$ putStrLn \"print from effect!\" -- Lift\n>             return \$ show \$ fromIntegral i * f\n>     print r\n\nFor more information about extensible effects , see the original paper at\n<http://okmij.org/ftp/Haskell/extensible/exteff.pdf>.\nBut, this package is significantly different from the original.\nIt uses a chains of ordinary GADTs created by TH.\nNo Typeable, no unsafe... , no ExistentialQuantification ...";
       buildType = "Simple";
       };

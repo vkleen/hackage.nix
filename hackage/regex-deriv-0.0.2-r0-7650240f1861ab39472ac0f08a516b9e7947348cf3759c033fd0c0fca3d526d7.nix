@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = { base4 = true; };
     package = {
@@ -50,7 +50,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       homepage = "http://code.google.com/p/xhaskell-regex-deriv/";
       url = "";
       synopsis = "Replaces/Enhances Text.Regex. Implementing regular expression matching using Bzozoski's Deriviative";
-      description = "Regex algorithm implementation using derivatives.";
+      description = "Regex algorithm implementation using derivatives. ";
       buildType = "Simple";
       };
     components = {

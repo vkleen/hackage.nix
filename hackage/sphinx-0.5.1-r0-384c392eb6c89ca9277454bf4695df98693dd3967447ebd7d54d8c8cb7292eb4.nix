@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = { version-1-1-beta = false; };
     package = {
@@ -50,7 +50,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       homepage = "https://github.com/gregwebs/haskell-sphinx-client";
       url = "";
       synopsis = "Haskell bindings to the Sphinx full-text searching deamon.";
-      description = "Haskell bindings to the Sphinx full-text searching deamon. Compatible with Sphinx version 2.0";
+      description = "Haskell bindings to the Sphinx full-text searching deamon. Compatible with Sphinx version 2.0 ";
       buildType = "Simple";
       };
     components = {

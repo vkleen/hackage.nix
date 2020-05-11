@@ -37,14 +37,14 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
       specVersion = "1.10";
       identifier = { name = "constrictor"; version = "0.1.1.1"; };
       license = "MIT";
-      copyright = "2018 (c) chessai";
+      copyright = "2018 (c) chessai ";
       maintainer = "chessai1996@gmail.com";
       author = "chessai";
       homepage = "https://github.com/chessai/constrictor.git";

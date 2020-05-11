@@ -37,14 +37,14 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
       specVersion = "1.8";
       identifier = { name = "huck"; version = "0.0.1"; };
       license = "BSD-3-Clause";
-      copyright = "(c) 2017 Tim McGilchrist";
+      copyright = "(c) 2017 Tim McGilchrist ";
       maintainer = "Tim McGilchrist <timmcgil@gmail.com>";
       author = "Tim McGilchrist <timmcgil@gmail.com>";
       homepage = "https://github.com/tmcgilchrist/huck";

@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -50,7 +50,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       homepage = "";
       url = "";
       synopsis = "A list type based on the Kleene star and plus.";
-      description = "This package provides a simple list type which is defined mutually with a non-empty list type. This makes interop between the two simpler. The types take their names from the Kleene star and plus.";
+      description = "This package provides a simple list type which is defined mutually with a non-empty list type. This makes interop between the two simpler. The types take their names from the Kleene star and plus. ";
       buildType = "Custom";
       setup-depends = [
         (hsPkgs.buildPackages.base or (pkgs.buildPackages.base or (buildToolDepError "base")))

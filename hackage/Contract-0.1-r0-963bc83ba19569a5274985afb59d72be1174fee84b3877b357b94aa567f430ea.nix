@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Olaf Chitil";
       homepage = "http://www.cs.kent.ac.uk/~oc/contracts.html";
       url = "";
-      synopsis = "Practical typed lazy contracts.";
+      synopsis = "Practical typed lazy contracts. ";
       description = "Contracts describe properties of expressions (esp. functions) that are\nchecked at run-time.\nFor example, a contract states that an expression is a natural number,\na list has at least one element or a function requires a natural number\nand a non-empty list of natural numbers as arguments and will produce a\nnatural number as result.\nThus these properties are both documented and enforced.\nContracts are more expressive than static types.\nIf a contract is violated, then an informative exception is raised.\nSee homepage or Olaf Chitil: \"Practical Typed Lazy Contracts\", ICFP 2012, ACM.";
       buildType = "Simple";
       };

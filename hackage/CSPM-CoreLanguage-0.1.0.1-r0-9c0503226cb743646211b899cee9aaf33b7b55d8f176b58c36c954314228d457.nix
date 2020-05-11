@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "2010 Marc Fontaine";
       homepage = "http://www.stups.uni-duesseldorf.de/~fontaine/csp";
       url = "";
-      synopsis = "Definition of a FDR-compatible CSP core-language.";
+      synopsis = "Definition of a FDR-compatible CSP core-language. ";
       description = "This package contains an interface for a CSP core-language.\nIt defines processes, events, event sets, a EDSL for process operations like\nparallel or interleaving.\nThis interface can be used to implement a FDR-2.83 compatible CSPM animator.\nWe use this interface in our tool to connect the functional CSPM-sub-language\nwith core CSP functionality.";
       buildType = "Simple";
       };

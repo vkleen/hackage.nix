@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -46,11 +46,11 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       license = "BSD-3-Clause";
       copyright = "2017 Sasa Bogicevic";
       maintainer = "brutallesale@gmail.com";
-      author = "Sasa Bogicevic";
+      author = "Sasa Bogicevic ";
       homepage = "https://github.com/v0d1ch/serviette#readme";
       url = "";
-      synopsis = "JSON to Sql";
-      description = "Use json to generate simple sql queries. I needed this for the work project and decided to implement it also                             in haskell. This could be used to query the database directly from frontend.";
+      synopsis = "JSON to Sql ";
+      description = "Use json to generate simple sql queries. I needed this for the work project and decided to implement it also                             in haskell. This could be used to query the database directly from frontend.  ";
       buildType = "Simple";
       };
     components = {

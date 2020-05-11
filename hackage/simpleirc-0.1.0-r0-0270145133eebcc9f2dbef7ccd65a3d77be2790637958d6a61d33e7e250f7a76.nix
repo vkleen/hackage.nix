@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -47,7 +47,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       copyright = "(c) 2010 Dominik Picheta";
       maintainer = "Dominik Picheta <dominikpicheta@googlemail.com>";
       author = "Dominik Picheta <dominikpicheta@googlemail.com>";
-      homepage = "http://github.com/dom96/SimpleIRC";
+      homepage = "http://github.com/dom96/SimpleIRC  ";
       url = "http://code.haskell.org/fastirc/";
       synopsis = "Simple IRC Library";
       description = "Simple IRC Library. This IRC Library aims to be simple and lightweight.";

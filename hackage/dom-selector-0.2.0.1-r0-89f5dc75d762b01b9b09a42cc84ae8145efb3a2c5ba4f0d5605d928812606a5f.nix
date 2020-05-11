@@ -37,14 +37,14 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
       specVersion = "1.8";
       identifier = { name = "dom-selector"; version = "0.2.0.1"; };
       license = "BSD-3-Clause";
-      copyright = "Copyright 2012-2013 by Nebuta Lab";
+      copyright = "Copyright 2012-2013 by Nebuta Lab           ";
       maintainer = "nebuta.office@gmail.com";
       author = "Nebuta Lab";
       homepage = "https://github.com/nebuta/";

@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Edward A. Kmett";
       homepage = "http://github.com/ekmett/prelude-extras";
       url = "";
-      synopsis = "Haskell 98 - higher order versions of Prelude classes";
+      synopsis = "Haskell 98 - higher order versions of Prelude classes ";
       description = "Haskell 98 - higher order versions of Prelude classes to ease programming with polymorphic recursion and reduce UndecidableInstances\n\nSee <http://flint.cs.yale.edu/trifonov/papers/sqcc.pdf> for further discussion of the approach taken here.";
       buildType = "Simple";
       };

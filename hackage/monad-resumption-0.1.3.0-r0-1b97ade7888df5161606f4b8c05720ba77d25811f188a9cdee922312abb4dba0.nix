@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -50,7 +50,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       homepage = "https://github.com/igraves/resumption_monads";
       url = "";
       synopsis = "Resumption and reactive resumption monads for Haskell.";
-      description = "This package contains the definitions of Resumption and Reactive Resumption Monads.";
+      description = "This package contains the definitions of Resumption and Reactive Resumption Monads.  ";
       buildType = "Simple";
       };
     components = {

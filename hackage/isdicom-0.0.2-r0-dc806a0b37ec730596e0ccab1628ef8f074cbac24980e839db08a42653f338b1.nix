@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = { small_base = true; };
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Tony Morris <ʇǝu˙sıɹɹoɯʇ@ןןǝʞsɐɥ>";
       homepage = "https://github.com/tonymorris/isdicom";
       url = "";
-      synopsis = "An executable and library to determine if a file is a DICOM file";
+      synopsis = "An executable and library to determine if a file is a DICOM file ";
       description = "An executable and library to determine if a file is a DICOM file\n\nExit codes:\n\n* 0 - is DICOM file\n\n* 1 - is not a DICOM file\n\n* 2 - file does not exist\n\n* 3 - file is not readable\n\n* 4 - file is a directory";
       buildType = "Custom";
       };

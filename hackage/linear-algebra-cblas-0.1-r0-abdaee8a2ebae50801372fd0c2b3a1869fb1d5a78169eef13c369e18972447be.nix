@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -45,7 +45,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       identifier = { name = "linear-algebra-cblas"; version = "0.1"; };
       license = "BSD-3-Clause";
       copyright = "(c) 2010. Patrick Perry <patperry@gmail.com>, Carter Schonwald <carter atsign wellposed dot com> 2012";
-      maintainer = "Carter Schonwald <carter atsign wellposed dot com>";
+      maintainer = "Carter Schonwald <carter atsign wellposed dot com> ";
       author = "Patrick Perry, Carter Schonwald";
       homepage = "http://github.com/cartazio/hs-cblas";
       url = "";

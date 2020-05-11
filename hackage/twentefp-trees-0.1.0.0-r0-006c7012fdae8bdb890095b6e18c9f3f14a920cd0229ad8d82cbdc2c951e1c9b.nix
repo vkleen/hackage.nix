@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -45,11 +45,11 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       identifier = { name = "twentefp-trees"; version = "0.1.0.0"; };
       license = "BSD-3-Clause";
       copyright = "";
-      maintainer = "sebastiaan.la.fleur@gmail.com";
+      maintainer = "sebastiaan.la.fleur@gmail.com          ";
       author = "Sebastiaan la Fleur";
       homepage = "";
       url = "";
-      synopsis = "Tree type and show functions for lab assignment of University of Twente. Contains RoseTree and ParseTree";
+      synopsis = "Tree type and show functions for lab assignment of University of Twente. Contains RoseTree and ParseTree      ";
       description = "";
       buildType = "Simple";
       };

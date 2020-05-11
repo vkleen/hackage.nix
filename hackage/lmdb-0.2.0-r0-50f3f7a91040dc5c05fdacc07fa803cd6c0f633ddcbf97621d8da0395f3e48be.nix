@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "David Barbour";
       homepage = "http://github.com/dmbarbour/haskell-lmdb";
       url = "";
-      synopsis = "Lightning MDB bindings";
+      synopsis = "Lightning MDB bindings ";
       description = "LMDB is a read-optimized Berkeley DB replacement developed by Sysmas\nfor the OpenLDAP project. LMDB has impressive performance characteristics\nand a friendly BSD-style license.\n\nYou will need to install the lmdb development files to install this\nlibrary, e.g. `sudo apt-get install liblmdb-dev` works for Ubuntu 14.04\n\nAt the moment, only a raw, low-level interface to LMDB is supported.";
       buildType = "Simple";
       };

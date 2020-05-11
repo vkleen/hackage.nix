@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -45,12 +45,12 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       identifier = { name = "MailchimpSimple"; version = "0.2.0.0"; };
       license = "BSD-3-Clause";
       copyright = "";
-      maintainer = "dan9131@gmail.com";
+      maintainer = "dan9131@gmail.com          ";
       author = "Dananji";
       homepage = "https://github.com/Dananji/MailchimpSimple";
       url = "";
       synopsis = "Haskell library to interact with Mailchimp JSON API Version 3.0";
-      description = "This package contains the basic functions supported by Mailchimp JSON API. For HTTP Authentication, it uses Basic HTTP Authentication.";
+      description = "This package contains the basic functions supported by Mailchimp JSON API. For HTTP Authentication, it uses Basic HTTP Authentication. ";
       buildType = "Simple";
       };
     components = {

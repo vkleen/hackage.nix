@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = { build-example = false; };
     package = {
@@ -52,7 +52,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Duncan Coutts, Nicolas Wu, Edsko de Vries";
       homepage = "http://haskell-distributed.github.com";
       url = "";
-      synopsis = "Simple zero-configuration backend for Cloud Haskell";
+      synopsis = "Simple zero-configuration backend for Cloud Haskell ";
       description = "Simple backend based on the TCP transport which offers node\ndiscovery based on UDP multicast. This is a zero-configuration\nbackend designed to get you going with Cloud Haskell quickly\nwithout imposing any structure on your application.";
       buildType = "Simple";
       };

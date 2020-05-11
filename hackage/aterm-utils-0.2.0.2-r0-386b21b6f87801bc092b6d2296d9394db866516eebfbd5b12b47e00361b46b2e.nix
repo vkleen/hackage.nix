@@ -37,14 +37,14 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
       specVersion = "1.8";
       identifier = { name = "aterm-utils"; version = "0.2.0.2"; };
       license = "BSD-3-Clause";
-      copyright = "(c) 2012 Galois, Inc";
+      copyright = "(c) 2012 Galois, Inc ";
       maintainer = "dagit@galois.com";
       author = "Jason Dagit";
       homepage = "https://github.com/GaloisInc/aterm-utils";

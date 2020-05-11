@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -47,7 +47,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       copyright = "";
       maintainer = "edofic@gmail.com";
       author = "Andraz Bajt";
-      homepage = "https://github.com/edofic/koofr-api-hs";
+      homepage = "https://github.com/edofic/koofr-api-hs                       ";
       url = "";
       synopsis = "Client to Koofr API";
       description = "Koofr is a storage as a service provider located in Europe. See https://koofr.eu for more info. This is an API wrapper that simplifies working with files.\nFilesystem roots are called mounts and cannot be manipulated through api.\nThe API is contained in a type class in order to allow mocking. Mock runner and wider API coverage coming soon.";

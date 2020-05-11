@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Scott West";
       homepage = "https://github.com/scottgw/language-eiffel";
       url = "";
-      synopsis = "Parser and pretty printer for the Eiffel language.";
+      synopsis = "Parser and pretty printer for the Eiffel language. ";
       description = "This package provides a base to analyze and transform\nthe Eiffel language. It is suitable to build parsers.";
       buildType = "Simple";
       };

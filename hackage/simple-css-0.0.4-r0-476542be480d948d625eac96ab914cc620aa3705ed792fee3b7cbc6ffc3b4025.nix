@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Anton Kholomiov";
       homepage = "";
       url = "";
-      synopsis = "simple binding of css and html";
+      synopsis = "simple binding of css and html ";
       description = "Library binds css and html. It takes notion of /html for content, css for styling/ to extreme.\nThere are functions to build 'styling tree' and html elements can be placed only in the lists of the tree.\nHtml elements can be groupped with 'div', 'span' or 'a' tags and styled with subset of css.\nResult of the programm is string of css  code and list of html elements.\nModule \"SimpleCss\" contains core functions of the library and \"SimpleCss.Tricks\" translates some\ncss tricks i've found in the web.\nSee 'example/Main.hs' to get started";
       buildType = "Simple";
       };

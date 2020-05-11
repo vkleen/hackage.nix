@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -47,7 +47,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       copyright = "";
       maintainer = "paolo.veronelli@gmail.com";
       author = "Paolo Veronelli";
-      homepage = "https://github.com/paolino/marionetta";
+      homepage = "https://github.com/paolino/marionetta                    ";
       url = "";
       synopsis = "A study of marionetta movements.";
       description = "An opengl application to make animations with marionetta-like structures. Actually only marionetta placement is implemented. Mouse movements are now intended with at least a button pressed. Future versions of gloss may resolve the issue. A patch is distributed to change this issue in gloss package.";

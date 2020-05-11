@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = { analyse = true; };
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "David M Peixotto";
       homepage = "http://github.com/dmpots/fibon/wiki";
       url = "";
-      synopsis = "Tools for running and analyzing Haskell benchmarks";
+      synopsis = "Tools for running and analyzing Haskell benchmarks ";
       description = "Fibon is a set of tools for running and analyzing benchmark programs.\nThe fibon package contains the tools for benchmarking, but not the\nbenchmarks themselves. The package will build, but will not have any\nbenchmarks to run. A set of benchmarks can be found in the github repo\n\n<http://github.com/dmpots/fibon-benchmarks>\n\nFibon is a pure Haskell framework for running and analyzing benchmarks. Cabal\nis used for building the benchmarks, and the benchmark harness, configuration\nfiles, and benchmark descriptions are all written in Haskell. The benchmark\ndescriptions and run configurations are all statically compiled into the\nbenchmark runner to ensure that configuration errors are found at compile\ntime.\n\nThe Fibon tools are not tied to any compiler infrastructure and can build\nbenchmarks using any compiler supported by cabal. However, there are some\nextra features available when using GHC to build the benchmarks:\n* Support in config files for inplace GHC HEAD builds\n* Support in `fibon-run` for collecting GC stats from GHC compiled programs\n* Support in `fibon-analyse` for reading GC stats from Fibon result files\n\nFor more details see the Fibon wiki: <http://github.com/dmpots/fibon/wiki>";
       buildType = "Custom";
       };

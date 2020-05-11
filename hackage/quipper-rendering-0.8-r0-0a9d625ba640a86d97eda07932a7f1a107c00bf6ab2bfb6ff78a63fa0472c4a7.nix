@@ -37,14 +37,14 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
       specVersion = "1.10";
       identifier = { name = "quipper-rendering"; version = "0.8"; };
       license = "BSD-3-Clause";
-      copyright = "Copyright (C) 2012-2013 Applied Communication Sciences.";
+      copyright = "Copyright (C) 2012-2013 Applied Communication Sciences.   ";
       maintainer = "leonardo.taglialegne@gmail.com";
       author = "Applied Communication Sciences";
       homepage = "http://www.mathstat.dal.ca/~selinger/quipper/";

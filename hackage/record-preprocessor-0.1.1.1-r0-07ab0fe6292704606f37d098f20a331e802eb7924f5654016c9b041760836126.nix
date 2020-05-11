@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -47,7 +47,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       copyright = "(c) 2015, Nikita Volkov";
       maintainer = "Nikita Volkov <nikita.y.volkov@mail.ru>";
       author = "Nikita Volkov <nikita.y.volkov@mail.ru>";
-      homepage = "https://github.com/nikita-volkov/record-preprocessor";
+      homepage = "https://github.com/nikita-volkov/record-preprocessor ";
       url = "";
       synopsis = "Compiler preprocessor introducing a syntactic extension for anonymous records";
       description = "This package provides an executable \"record-preprocessor\",\nwhich can be used as a compilation phase to add support for\nthe Anynonymous Records syntax.\n\nTo get a look at what syntax the preprocessor enables check out\n<http://hackage.haskell.org/package/record-preprocessor-0.1.1.1/src/demo/Main.hs the demo> and\n<http://hackage.haskell.org/package/record-preprocessor-0.1.1.1/src/record-preprocessor.cabal its configuration in the Cabal file>,\nwhich are both bundled with this package.";

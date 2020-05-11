@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "HugoDaniel";
       homepage = "https://github.com/HugoDaniel/iso639";
       url = "";
-      synopsis = "ISO-639-1 language codes";
+      synopsis = "ISO-639-1 language codes ";
       description = "\nISO-639-1 language codes mapping to Haskell datatypes\n\nThe code is generated from the <http://www.loc.gov/standards/iso639-2/php/English_list.php official site> using haskell-src-exts in an extra file included in the .tar.gz.\n\nSpecial thanks to Petter Bergman for the suggestions and bug fixing\n";
       buildType = "Simple";
       };

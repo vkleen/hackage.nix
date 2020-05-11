@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -46,10 +46,10 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       license = "BSD-3-Clause";
       copyright = "";
       maintainer = "Ozgun Ataman <ozataman@gmail.com>";
-      author = "Ozgun Ataman";
+      author = "Ozgun Ataman ";
       homepage = "http://github.com/ozataman/csv-enumerator";
       url = "";
-      synopsis = "A flexible, fast, enumerator-based CSV parser library for Haskell.";
+      synopsis = "A flexible, fast, enumerator-based CSV parser library for Haskell.  ";
       description = "For more information and examples, check out the README at:\n<http://github.com/ozataman/csv-enumerator>.\nThe API is fairly well documented and I would encourage you to keep your\nhaddocks handy.";
       buildType = "Simple";
       };

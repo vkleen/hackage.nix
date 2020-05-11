@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -47,9 +47,9 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       copyright = "(c) 2008-2012 Bernard James Pope";
       maintainer = "florbitous@gmail.com";
       author = "Bernard James Pope (Bernie Pope)";
-      homepage = "http://github.com/bjpop/language-python";
+      homepage = "http://github.com/bjpop/language-python ";
       url = "";
-      synopsis = "Parsing and pretty printing of Python code.";
+      synopsis = "Parsing and pretty printing of Python code. ";
       description = "language-python is a Haskell library for lexical analysis, parsing\nand pretty printing Python code. It supports versions 2.x and 3.x of Python.";
       buildType = "Simple";
       };

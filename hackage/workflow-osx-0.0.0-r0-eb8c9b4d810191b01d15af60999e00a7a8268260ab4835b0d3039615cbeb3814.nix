@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Spiros Boosalis";
       homepage = "https://github.com/sboosali/workflow-osx#readme";
       url = "";
-      synopsis = "a \"Desktop Workflow\" monad with Objective-C bindings";
+      synopsis = "a \"Desktop Workflow\" monad with Objective-C bindings ";
       description = "a \\\"Desktop Workflow\\\" monad with Objective-C bindings\n\ne.g. press some keys, click the mouse, get/set the clipboard\n\nsee @Workflow.OSX@ for several examples\n\n(if the build fails, see the <https://github.com/sboosali/workflow-osx#the-build README>)\n\n(this package is on hackage for convenience, but it's still a prerelease)";
       buildType = "Simple";
       };

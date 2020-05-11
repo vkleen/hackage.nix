@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Ryan R. Newton";
       homepage = "https://github.com/rrnewton/haskell-lockfree/wiki";
       url = "";
-      synopsis = "A test-suite for any queue or double-ended queue satisfying an interface";
+      synopsis = "A test-suite for any queue or double-ended queue satisfying an interface ";
       description = "This package provides tests that can be used with any queue implementation\nthat satisfies the `abstract-deque` interface.";
       buildType = "Simple";
       };

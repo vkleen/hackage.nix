@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Joel Lehtonen";
       homepage = "https://github.com/zouppen/haskell-curl-aeson";
       url = "";
-      synopsis = "Communicate with HTTP service using JSON";
+      synopsis = "Communicate with HTTP service using JSON ";
       description = "A library for communicating with JSON over HTTP connection.\nSupports rich set of HTTP connectivity features provided by\nlibcurl combined to the performance and elegancy of aeson.\n\nAll HTTP methods are supported. Instances of 'ToJSON' and\n'FromJSON' typeclasses can be transferred via this library.\nSession cookies and other HTTP options may be passed to libcurl\nif needed.\n\nThis library is at its best when communicating with simple,\nnon-standardized JSON interfaces. If you are implementing\nJSON-RPC compliant client or server, take a look at\n<http://hackage.haskell.org/package/jmacro-rpc>.";
       buildType = "Simple";
       };

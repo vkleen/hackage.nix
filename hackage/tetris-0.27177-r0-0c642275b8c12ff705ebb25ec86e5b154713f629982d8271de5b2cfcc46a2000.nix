@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -47,7 +47,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       copyright = "";
       maintainer = "<mokehehe@gmail.com>";
       author = "mokehehe";
-      homepage = "http://d.hatena.ne.jp/mokehehe/20080921/tetris";
+      homepage = "http://d.hatena.ne.jp/mokehehe/20080921/tetris ";
       url = "";
       synopsis = "A 2-D clone of Tetris";
       description = "A simple clone of Tetris using GLUT.\n\nSubversion repo available at <http://svn.coderepos.org/share/lang/haskell/tetris>.";

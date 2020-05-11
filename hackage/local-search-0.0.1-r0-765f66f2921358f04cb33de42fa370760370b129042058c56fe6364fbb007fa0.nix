@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Richard Senington & David Duke";
       homepage = "http://www.comp.leeds.ac.uk/sc06r2s/Projects/HaskellLocalSearch";
       url = "";
-      synopsis = "AA first attempt at generalised local search within Haskell, for applications in combinatorial optimisation.";
+      synopsis = "AA first attempt at generalised local search within Haskell, for applications in combinatorial optimisation. ";
       description = "This library represents a first attempt at creating a generalised library for\nlocal (non-exhaustive) search in Haskell.  It is based on work presented to\nIFL2010, a draft of which is currently available on the homepage. The library\nmodels local search space using a rose tree, with child nodes forming the\nneighbourhood of any solution. The tree can then be transformed by various\ncombinators to implement different searching strategies; the result is then\n\"navigated\" to yield a sequence of solutions.";
       buildType = "Simple";
       };

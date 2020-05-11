@@ -37,20 +37,20 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
       specVersion = "1.20.0";
       identifier = { name = "pell"; version = "0.1.0.0"; };
       license = "MIT";
-      copyright = "(c) 2015 by Dr. Lars Brünjes";
+      copyright = "(c) 2015 by Dr. Lars Brünjes ";
       maintainer = "lbrunjes@gmx.de";
       author = "Lars Bruenjes";
       homepage = "https://github.com/brunjlar/pell";
       url = "";
       synopsis = "Package to solve the Generalized Pell Equation.";
-      description = "Finds all solutions of the generalized Pell Equation.";
+      description = "Finds all solutions of the generalized Pell Equation.   ";
       buildType = "Simple";
       };
     components = {

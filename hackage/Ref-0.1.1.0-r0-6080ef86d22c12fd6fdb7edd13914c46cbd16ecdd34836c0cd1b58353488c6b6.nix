@@ -37,19 +37,19 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
       specVersion = "1.10";
       identifier = { name = "Ref"; version = "0.1.1.0"; };
       license = "BSD-3-Clause";
-      copyright = "Copyright (C) 2013 Carter T Schonwald";
+      copyright = "Copyright (C) 2013 Carter T Schonwald ";
       maintainer = "carter at wellposed dot com";
       author = "Carter Tazio Schonwald";
       homepage = "https://bitbucket.org/carter/ref";
       url = "";
-      synopsis = "Generic Mutable Ref Abstraction Layer";
+      synopsis = "Generic Mutable Ref Abstraction Layer           ";
       description = "Ref is a generic layer over mutable references, currently only IO and ST refs.\nFuture extensions may include a generic api for shared state concurrency.";
       buildType = "Simple";
       };

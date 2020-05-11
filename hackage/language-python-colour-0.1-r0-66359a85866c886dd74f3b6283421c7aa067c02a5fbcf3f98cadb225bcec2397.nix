@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -46,11 +46,11 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       license = "BSD-3-Clause";
       copyright = "(c) 2009 Bernard James Pope";
       maintainer = "bjpop@csse.unimelb.edu.au";
-      author = "Bernard James Pope";
+      author = "Bernard James Pope ";
       homepage = "http://www.cs.mu.oz.au/~bjpop/";
       url = "";
-      synopsis = "Generate coloured XHTML for Python code.";
-      description = "Generate coloured XHTML for Python code.";
+      synopsis = "Generate coloured XHTML for Python code. ";
+      description = "Generate coloured XHTML for Python code. ";
       buildType = "Simple";
       };
     components = {

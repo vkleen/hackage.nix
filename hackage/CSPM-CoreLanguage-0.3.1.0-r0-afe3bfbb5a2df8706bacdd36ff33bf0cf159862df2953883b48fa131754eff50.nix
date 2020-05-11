@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "2010 - 2017 Marc Fontaine <Marc.Fontaine@gmx.de>";
       homepage = "";
       url = "";
-      synopsis = "Definition of a CSP core-language.";
+      synopsis = "Definition of a CSP core-language. ";
       description = "This package contains an interface for the CSP core-language.\nIt defines processes, events, event sets, and a domain specific language\nfor process operations like parallel or interleaving processes.";
       buildType = "Simple";
       };

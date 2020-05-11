@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -45,11 +45,11 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       identifier = { name = "berp"; version = "0.0.2"; };
       license = "BSD-3-Clause";
       copyright = "(c) 2010 Bernard James Pope";
-      maintainer = "florbitous@gmail.com";
+      maintainer = "florbitous@gmail.com ";
       author = "Bernard James Pope (Bernie Pope)";
-      homepage = "http://wiki.github.com/bjpop/berp/";
+      homepage = "http://wiki.github.com/bjpop/berp/  ";
       url = "";
-      synopsis = "An implementation of Python 3.";
+      synopsis = "An implementation of Python 3. ";
       description = "Berp is an implementation of Python 3, written in Haskell.\nIt provides a compiler and an interpreter. In both cases\nthe input Python program is translated into Haskell code.\nThe compiler turns the Haskell code into machine code.\nThe interpreter runs the Haskell code immediately via\nthe GHCi interpreter. The user interface of the interpreter\nimitates the one provided by CPython.";
       buildType = "Simple";
       };

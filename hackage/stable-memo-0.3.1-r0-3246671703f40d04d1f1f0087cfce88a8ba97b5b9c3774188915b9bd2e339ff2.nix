@@ -1,0 +1,66 @@
+let
+  buildDepError = pkg:
+    builtins.throw ''
+      The Haskell package set does not contain the package: ${pkg} (build dependency).
+      
+      If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
+      '';
+  sysDepError = pkg:
+    builtins.throw ''
+      The Nixpkgs package set does not contain the package: ${pkg} (system dependency).
+      
+      You may need to augment the system package mapping in haskell.nix so that it can be found.
+      '';
+  pkgConfDepError = pkg:
+    builtins.throw ''
+      The pkg-conf packages does not contain the package: ${pkg} (pkg-conf dependency).
+      
+      You may need to augment the pkg-conf package mapping in haskell.nix so that it can be found.
+      '';
+  exeDepError = pkg:
+    builtins.throw ''
+      The local executable components do not include the component: ${pkg} (executable dependency).
+      '';
+  legacyExeDepError = pkg:
+    builtins.throw ''
+      The Haskell package set does not contain the package: ${pkg} (executable dependency).
+      
+      If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
+      '';
+  buildToolDepError = pkg:
+    builtins.throw ''
+      Neither the Haskell package set or the Nixpkgs package set contain the package: ${pkg} (build tool dependency).
+      
+      If this is a system dependency:
+      You may need to augment the system package mapping in haskell.nix so that it can be found.
+      
+      If this is a Haskell dependency:
+      If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
+      '';
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
+  {
+    flags = {};
+    package = {
+      specVersion = "1.18";
+      identifier = { name = "stable-memo"; version = "0.3.1"; };
+      license = "MIT";
+      copyright = "";
+      maintainer = "Jake McArthur <Jake.McArthur@gmail.com>";
+      author = "Jake McArthur <Jake.McArthur@gmail.com>";
+      homepage = "";
+      url = "";
+      synopsis = "Memoization based on argument identity";
+      description = "Whereas most memo combinators memoize based on equality, stable-memo\ndoes it based on whether the exact same argument has been passed to\nthe function before (that is, is the same argument in memory).\n\n* stable-memo only evaluates keys to WHNF.\n\n* This can be more suitable for recursive functions over graphs with\ncycles.\n\n* stable-memo doesn't retain the keys it has seen so far, which\nallows them to be garbage collected if they will no longer be\nused. Finalizers are put in place to remove the corresponding\nentries from the memo table if this happens.\n\n* \"Data.StableMemo.Weak\" provides an alternative set of combinators\nthat also avoid retaining the results of the function, only\nreusing results if they have not yet been garbage collected.\n\n* There is no type class constraint on the function's argument.\n\nFor motivation, here is an implementation of map that preserves\nsharing of the spine for cyclic lists. It should even be safe to use\nthis on arbitrarily long, acyclic lists since as long as the garbage\ncollector is chasing you, the size of the memo table should stay\nunder control, too.\n\n> map :: (a -> b) -> [a] -> [b]\n> map f = go\n>   where go = memo map'\n>         map' []     = []\n>         map' (x:xs) = f x : go xs\n\nThis library is largely based on the implementation of memo found in\n\\\"Stretching the storage manager: weak pointers and stable names in\nHaskell\\\", from Simon Peyton Jones, Simon Marlow, and Conal Elliott\n(<http://community.haskell.org/~simonmar/papers/weak.pdf>).";
+      buildType = "Simple";
+      };
+    components = {
+      "library" = {
+        depends = [
+          (hsPkgs."base" or (buildDepError "base"))
+          (hsPkgs."hashtables" or (buildDepError "hashtables"))
+          (hsPkgs."ghc-prim" or (buildDepError "ghc-prim"))
+          ];
+        buildable = true;
+        };
+      };
+    }

@@ -37,14 +37,14 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
       specVersion = "1.10";
       identifier = { name = "relevant-time"; version = "0.1.0.0"; };
       license = "BSD-3-Clause";
-      copyright = "copyright (c) Layer 3 Communications, Daniel Cartwright";
+      copyright = "copyright (c) Layer 3 Communications, Daniel Cartwright ";
       maintainer = "dcartwright@layer3com.com";
       author = "Daniel Cartwright";
       homepage = "https://github.com/chessai/relevant-time.git";

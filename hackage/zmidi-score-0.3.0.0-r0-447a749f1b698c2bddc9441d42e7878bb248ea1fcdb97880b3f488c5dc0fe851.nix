@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -50,7 +50,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       homepage = "https://bitbucket.org/bash/zmidi-score";
       url = "";
       synopsis = "Representing MIDI a simple score.";
-      description = "Representing MIDI data as a simple score using the zmidi-core library.";
+      description = "Representing MIDI data as a simple score using the zmidi-core library.  ";
       buildType = "Simple";
       };
     components = {

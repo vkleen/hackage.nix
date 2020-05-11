@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -45,12 +45,12 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       identifier = { name = "cassandra-thrift"; version = "0.8.0"; };
       license = "LicenseRef-OtherLicense";
       copyright = "";
-      maintainer = "kirk@glyphsoftware.com";
-      author = "Thrift v.0.6.0";
-      homepage = "http://cassandra.apache.org/";
+      maintainer = "kirk@glyphsoftware.com ";
+      author = "Thrift v.0.6.0 ";
+      homepage = "http://cassandra.apache.org/ ";
       url = "";
-      synopsis = "thrift bindings to the cassandra database";
-      description = "The Cassandra (v.0.8.0) database bindings, generated using the Thrift (v.0.6.0) compliler, Released under the Apache 2.0 license.";
+      synopsis = "thrift bindings to the cassandra database ";
+      description = "The Cassandra (v.0.8.0) database bindings, generated using the Thrift (v.0.6.0) compliler, Released under the Apache 2.0 license. ";
       buildType = "Simple";
       };
     components = {

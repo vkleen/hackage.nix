@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Ramin Honary";
       homepage = "https://github.com/RaminHAL9001/inf-interval";
       url = "";
-      synopsis = "Non-contiguous interval data types with potentially infinite ranges.";
+      synopsis = "Non-contiguous interval data types with potentially infinite ranges. ";
       description = "Non-contiguous interval data types with potentially infinite ranges.\nThis library was originally part of the Dao package, but has been branched\ninto it's own package in the hopes that it will be useful in a wider\nvariety of projects.";
       buildType = "Simple";
       };

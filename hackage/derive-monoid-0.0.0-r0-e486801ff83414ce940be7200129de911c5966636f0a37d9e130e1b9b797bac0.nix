@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -47,7 +47,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       copyright = "";
       maintainer = "samboosalis@gmail.com";
       author = "Spiros Boosalis";
-      homepage = "https://github.com/sboosali/derive-monoid#readme";
+      homepage = "https://github.com/sboosali/derive-monoid#readme ";
       url = "";
       synopsis = "derive Semigroup/Monoid/IsList";
       description = "when your type can hold a list of itself, you can derive simple (but total\\/lawful) Semigroup\\/Monoid\\/IsList instances with TemplateHaskell.\n\nsee the <https://hackage.haskell.org/package/derive-monoid/docs/Derive-List.html Derive.List> for examples and documentation.\nbrowse the <https://github.com/sboosali/derive-monoid/tree/master/test/Build/Derive/List test suite> for more (buildable) examples:\n\n* <https://github.com/sboosali/derive-monoid/blob/master/test/Build/Derive/List/HigherKind.hs HigherKind>\n\n* <https://github.com/sboosali/derive-monoid/blob/master/test/Build/Derive/List/IsList.hs IsList>\n\n* <https://github.com/sboosali/derive-monoid/blob/master/test/Build/Derive/List/Monoid.hs Monoid>\n\n* <https://github.com/sboosali/derive-monoid/blob/master/test/Build/Derive/List/Semigroup.hs Semigroup>";

@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Balazs Komuves";
       homepage = "http://moire.be/haskell/";
       url = "";
-      synopsis = "Layout and render text with TrueType fonts using OpenGL";
+      synopsis = "Layout and render text with TrueType fonts using OpenGL ";
       description = "This is a library to render text with OpenGL.\nTrueType (and OpenType) fonts are supported; glyph rendering\nis via @stb_truetype@. The rendered glyphs are stored in\nOpenGL textures (built up lazily).\nA simple typesetting\\/layouting engine is included.";
       buildType = "Simple";
       };

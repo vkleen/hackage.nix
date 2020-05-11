@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -45,7 +45,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       identifier = { name = "sgf"; version = "0.1.3"; };
       license = "BSD-3-Clause";
       copyright = "";
-      maintainer = "Toni Cebrián ancechu@gmail.com";
+      maintainer = "Toni Cebrián ancechu@gmail.com ";
       author = "Daniel Wagner daniel@wagner-home.com";
       homepage = "https://github.com/tonicebrian/sgf";
       url = "";

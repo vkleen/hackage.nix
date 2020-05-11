@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = { examples = false; };
     package = {
@@ -46,7 +46,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       license = "BSD-3-Clause";
       copyright = "(c) 2008-2016 by Conal Elliott";
       maintainer = "conal@conal.net";
-      author = "Conal Elliott";
+      author = "Conal Elliott ";
       homepage = "https://github.com/conal/MemoTrie";
       url = "";
       synopsis = "Trie-based memo functions";

@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Stephen Diehl";
       homepage = "https://github.com/llvm-hs/llvm-hs-pretty";
       url = "";
-      synopsis = "A pretty printer for LLVM IR.";
+      synopsis = "A pretty printer for LLVM IR. ";
       description = "A pretty printer for the LLVM AST types provided by llvm-hs.";
       buildType = "Simple";
       };

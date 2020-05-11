@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "L. Thomas van Binsbergen";
       homepage = "";
       url = "";
-      synopsis = "GLL parser with simple combinator interface";
+      synopsis = "GLL parser with simple combinator interface ";
       description = "The package fungll-combinators provides generalised top-down parsing combinators according to the\nFUNGLL parsing algorithm [Van Binsbergen et al. 2018].\n\nPlease email any questions, comments and suggestions to the\nmaintainer.";
       buildType = "Simple";
       };

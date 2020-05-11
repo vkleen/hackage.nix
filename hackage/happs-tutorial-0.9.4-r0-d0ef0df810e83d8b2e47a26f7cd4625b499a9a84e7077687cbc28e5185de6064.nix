@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = { base4 = true; };
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Thomas Hartman, Eelco Lempsink, Creighton Hogg";
       homepage = "";
       url = "";
-      synopsis = "A Happstack Tutorial that is its own web 2.0-type demo.";
+      synopsis = "A Happstack Tutorial that is its own web 2.0-type demo. ";
       description = "A nice way to learn how to build web sites with Happstack";
       buildType = "Simple";
       };

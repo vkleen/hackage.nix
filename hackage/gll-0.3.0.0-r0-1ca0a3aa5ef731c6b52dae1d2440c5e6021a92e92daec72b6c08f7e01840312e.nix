@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "L. Thomas van Binsbergen";
       homepage = "";
       url = "";
-      synopsis = "GLL parser with simple combinator interface";
+      synopsis = "GLL parser with simple combinator interface ";
       description = "The package gll provides generalised top-down parsing according to the GLL\nparsing algorithm [Scott and Johnstone 2010,2013].\n\nThe user can either invoke the GLL\nparser directly by importing \"GLL.Parser\" and providing a\nvalue of the Grammar datatype in (exported by \"GLL.Parser\").\nAlternatively, the user can import \"GLL.Combinators\" to write combinator expressions\nfrom which a grammar of the required form is extracted.\nThe combinators enable applying arbitrary semantic actions to parse results.\nThe documentation of the respective packages provides more information.\n\nThe main motivation for this package\nis the development of Domain Specific Languages (DSLs).\nMore specifically: designing DSLs with minimal differences between\nbetween abstract and concrete syntax (abstract syntax is often ambiguous).\n\nPlease email any questions, comments and suggestions to the\nmaintainer.";
       buildType = "Simple";
       };

@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = { devel = false; };
     package = {
@@ -47,7 +47,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       copyright = "(c) Marcin Mrotek 2015";
       maintainer = "marcin.jan.mrotek@gmail.com";
       author = "Marcin Mrotek";
-      homepage = "https://github.com/marcinmrotek/vinyl-utils";
+      homepage = "https://github.com/marcinmrotek/vinyl-utils       ";
       url = "";
       synopsis = "Utilities for vinyl";
       description = "Operations on records parametrized with various kinds of functors.";

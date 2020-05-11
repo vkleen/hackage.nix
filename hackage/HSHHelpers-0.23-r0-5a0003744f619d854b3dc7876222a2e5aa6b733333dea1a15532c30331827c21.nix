@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Thomas Hartman";
       homepage = "";
       url = "";
-      synopsis = "Convenience functions that use HSH, instances for HSH.";
+      synopsis = "Convenience functions that use HSH, instances for HSH. ";
       description = "Functions I found I was using repeatedly when doing shell programming with HSH.\nRather than duplicate code, released on hackage.\nA lot of this is cruft. For instance, you are probably better off having a look at System.Posix.Files and\nSystem.Posix.Users, which I overlooked when writing, before making too much use of hsh helpers.";
       buildType = "Simple";
       };

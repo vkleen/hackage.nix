@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Brett Wines";
       homepage = "http://github.com/bgwines/zora";
       url = "";
-      synopsis = "Graphing library wrapper + assorted useful functions";
+      synopsis = "Graphing library wrapper + assorted useful functions ";
       description = "A library of assorted useful functions and data types and classes for working with lists, doing mathematical operations and graphing custom data types.";
       buildType = "Simple";
       };

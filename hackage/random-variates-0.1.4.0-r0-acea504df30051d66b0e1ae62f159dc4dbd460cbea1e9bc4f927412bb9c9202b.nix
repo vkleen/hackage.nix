@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -50,7 +50,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       homepage = "https://bitbucket.org/kpratt/random-variate";
       url = "";
       synopsis = "\"Uniform RNG => Non-Uniform RNGs\"";
-      description = "\"Collection of transforms uniform random number generators (RNGs) into any of a dozen common RNGs. Each presenting several common interfaces. Additionally Empirical distributions can be sampled from and tested (chi-squared) against theoretical distributions.\"";
+      description = "\"Collection of transforms uniform random number generators (RNGs) into any of a dozen common RNGs. Each presenting several common interfaces. Additionally Empirical distributions can be sampled from and tested (chi-squared) against theoretical distributions.\"   ";
       buildType = "Simple";
       };
     components = {

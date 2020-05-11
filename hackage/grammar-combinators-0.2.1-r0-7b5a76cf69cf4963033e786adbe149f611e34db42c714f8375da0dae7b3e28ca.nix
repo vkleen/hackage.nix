@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -47,7 +47,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       copyright = "";
       maintainer = "Dominique Devriese <dominique.devriese@gmail.com>";
       author = "Dominique Devriese <dominique.devriese@gmail.com>";
-      homepage = "http://projects.haskell.org/grammar-combinators/";
+      homepage = "http://projects.haskell.org/grammar-combinators/ ";
       url = "";
       synopsis = "A parsing library of context-free grammar combinators.";
       description = "The grammar-combinators library is a novel parsing library using\nan explicit representation of recursion to provide various novel\nfeatures, for grammar analysis, transformation and parsing\nfunctionality.";

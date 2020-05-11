@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -46,7 +46,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       license = "BSD-3-Clause";
       copyright = "(c) 2013-2015 Wander Hillen";
       maintainer = "wjw.hillen@gmail.com";
-      author = "Wander Hillen";
+      author = "Wander Hillen\t";
       homepage = "https://github.com/WJWH/HPi";
       url = "";
       synopsis = "GPIO, I2C and SPI functions for the Raspberry Pi.";

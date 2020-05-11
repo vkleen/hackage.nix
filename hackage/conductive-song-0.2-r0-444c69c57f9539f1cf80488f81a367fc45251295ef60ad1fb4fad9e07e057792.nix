@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -50,7 +50,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       homepage = "http://www.renickbell.net/doku.php?id=conductive-song";
       url = "";
       synopsis = "a library of functions which are useful for composing music";
-      description = "This library contains functions which are useful for composing music, including scales and pitch.";
+      description = "This library contains functions which are useful for composing music, including scales and pitch. ";
       buildType = "Simple";
       };
     components = {

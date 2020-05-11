@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Sylvain HENRY";
       homepage = "http://github.com/hsyl20/dynamic-linker-template";
       url = "";
-      synopsis = "Automatically derive dynamic linking methods from a data type.";
+      synopsis = "Automatically derive dynamic linking methods from a data type. ";
       description = "This package uses Template Haskell to generate dynamic linking FFI methods from a\nrecord by using its field names. A load function is generated to create an instance\nof the data from a library path.\n\nOptional symbols are supported (use Maybe types in the data structure).\n\nA String->String method can be provided to deal with symbols whose names are not\nexactly the same as field names.\n\nSee <https://github.com/hsyl20/dynamic-linker-template/blob/master/Tests/Test.hs> for an example.";
       buildType = "Simple";
       };

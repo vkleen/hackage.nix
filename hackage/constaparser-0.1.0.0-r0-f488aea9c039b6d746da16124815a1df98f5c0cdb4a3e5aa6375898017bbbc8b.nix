@@ -37,19 +37,19 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
       specVersion = "1.10";
       identifier = { name = "constaparser"; version = "0.1.0.0"; };
       license = "BSD-3-Clause";
-      copyright = "2018 Andrew Martin";
+      copyright = "2018 Andrew Martin           ";
       maintainer = "chessai1996@gmail.com";
       author = "Andrew Martin";
       homepage = "https://github.com/chessai/constaparser";
       url = "";
-      synopsis = "Parse ByteStrings of a constant length.";
+      synopsis = "Parse ByteStrings of a constant length. ";
       description = "Parse constant-length ByteStrings, which allows\nfor some performance optimisations.\nYou can also convert from a 'Constaparser' to a\n'Parser' from Attoparsec.";
       buildType = "Simple";
       };

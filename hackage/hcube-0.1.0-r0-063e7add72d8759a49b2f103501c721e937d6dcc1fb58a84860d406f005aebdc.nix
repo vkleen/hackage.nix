@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Todd Wegner";
       homepage = "";
       url = "";
-      synopsis = "Virtual Rubik's cube of arbitrary size.";
+      synopsis = "Virtual Rubik's cube of arbitrary size. ";
       description = "Provides virtual model of NxNxN Rubik's cube and console visualization for\n2x2x2, 3x3x3 ,4x4x4, and 5x5x5. Console visualization is choosen in the interest\nof portability. Virtual cube can be constructed from the state\nof a physical cube. Support for a two phase algorithm will be given in a future release\nfor cubes of size 3x3x3 to find the smallest number of moves which solve the cube.\nThe Rubik's cube exhibits many non-trival aspects of group theory.\nThe package comes with an executable \"hcube\".\nThe command ./hcube 5 will create a 5x5x5 cube.";
       buildType = "Simple";
       };

@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Tuomo Valkonen";
       homepage = "http://modeemi.fi/~tuomov/riot/";
       url = "";
-      synopsis = "Riot is an Information Organisation Tool";
+      synopsis = "Riot is an Information Organisation Tool ";
       description = "Riot is a tool for keeping (textual) information organised. Some people\ncall such programs 'outliners'. It is a todo list and note manager, and\na manager for whatever information one might collect, that I wrote\nbecause I couldn't find a single one that was at all close to what I\nwanted. Riot has an interface resembling those of slrn and mutt and all\ntext editing is done with an external editor: Riot is simply a\nnice-to-use browser for collections of text.";
       buildType = "Simple";
       };

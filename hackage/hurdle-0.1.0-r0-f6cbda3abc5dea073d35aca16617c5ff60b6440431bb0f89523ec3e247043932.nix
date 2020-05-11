@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "";
       homepage = "http://code.google.com/p/copperbox/";
       url = "";
-      synopsis = "Extract function names from Windows DLLs.";
+      synopsis = "Extract function names from Windows DLLs. ";
       description = "Hurdle - (H)askell (U)tilty (R)egarding (DL)l (E)xports.\n\nExtract function names from Windows DLLs a-la pexports.\n\nHurdle has minimal dependencies: base, array and pretty.\n\nCurrently Hurdle also has minimal utility - please consider\npexports instead as Hurdle doesn't yet print ordinals\netcetera (Hurdle was a Sunday afternoon hack that took a wee\nbit longer). But... if anyone has a compelling use case that\nwould benefit the community, I'm willing to look at extending\nHurdle.\n";
       buildType = "Simple";
       };

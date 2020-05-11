@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -47,7 +47,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       copyright = "(C) songzh";
       maintainer = "songzh <Haskell.Zhang.Song@hotmail.com>";
       author = "songzh <Haskell.Zhang.Song@hotmail.com>";
-      homepage = "https://github.com/HaskellZhangSong/derive-topdown";
+      homepage = "https://github.com/HaskellZhangSong/derive-topdown                   ";
       url = "";
       synopsis = "Help Haskellers derive class instances for composited data types.";
       description = "This package will make it easier to derive class instance for complex composited data types by using Template Haskell.";

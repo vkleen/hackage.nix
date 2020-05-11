@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Sasha Rush";
       homepage = "http://github.com/srush/SemiRings/tree/master";
       url = "";
-      synopsis = "Pragmatic framework for dynamic programming";
+      synopsis = "Pragmatic framework for dynamic programming  ";
       description = "This module provides a simple declarative framework for dynamic programming optimization.\nUsers specify a dynamic programming problem as a simple haskell function that looks very similar to\nmathematical recursion used in texts. The specification is then translated into a form that can be\nsolved efficiently by a modular solver. Includes solvers using memoization,\nstrict and lazy ordered tables, and recursion with a range of data structures for the underlying table.\nThis method also separates processing steps like pruning and debugging from the recursion itself, and\nthis package contains preliminary tools for beam search and tracing.";
       buildType = "Simple";
       };

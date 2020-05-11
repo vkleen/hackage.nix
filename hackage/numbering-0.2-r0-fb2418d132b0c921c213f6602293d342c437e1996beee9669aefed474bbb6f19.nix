@@ -37,15 +37,15 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
       specVersion = "1.6";
       identifier = { name = "numbering"; version = "0.2"; };
       license = "BSD-3-Clause";
-      copyright = "Daniel Schüssler";
-      maintainer = "Daniel Schüssler";
+      copyright = "Daniel Schüssler  ";
+      maintainer = "Daniel Schüssler ";
       author = "Daniel Schüssler";
       homepage = "https://github.com/DanielSchuessler/numbering";
       url = "";

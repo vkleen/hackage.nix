@@ -37,20 +37,20 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
       specVersion = "1.6";
       identifier = { name = "vowpal-utils"; version = "0.1"; };
       license = "BSD-3-Clause";
-      copyright = "Carter Schonwald  Copyright (c) 2012";
+      copyright = "Carter Schonwald  Copyright (c) 2012      ";
       maintainer = "first dot last at gmail dot com";
       author = "Carter Tazio Schonwald";
       homepage = "https://github.com/cartazio/Vowpal-Utils";
       url = "";
-      synopsis = "Vowpal Wabbit utilities";
-      description = "Vowpal Wabbit hash and utils";
+      synopsis = "Vowpal Wabbit utilities ";
+      description = "Vowpal Wabbit hash and utils         ";
       buildType = "Simple";
       };
     components = {

@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "David Barbour";
       homepage = "http://github.com/dmbarbour/haskell-vcache-trie";
       url = "";
-      synopsis = "patricia tries modeled above VCache";
+      synopsis = "patricia tries modeled above VCache ";
       description = "VCache supports larger-than-memory values with caching, persistence,\nand structure sharing. Effective use of VCache requires useful data\nstructures be modeled above it. The trie is useful for modeling key\nvalue databases or abstract virtual filesystems, where keys have\nshared prefixes or elements with a common prefix are likely to be\nupdated together.\n\nCurrently, the implementation is specialized to a bytestring trie.";
       buildType = "Simple";
       };

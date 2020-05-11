@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Alessandro Vermeulen <me@alessandrovermeulen.me>";
       homepage = "http://spockz.github.com/lhs2texhl/";
       url = "";
-      synopsis = "Literate highlighter preprocessor for lhs2tex";
+      synopsis = "Literate highlighter preprocessor for lhs2tex ";
       description = "A helper executable for highlighting code with lhs2tex. Pass\nan Haskell file to lhs2TeX-hl and it will generate a file\nwith formatting directives to be used with lhs2TeX for you.\nFor more information, please visit the repository, or look\nat the release blog post:\nhttp://alessandrovermeulen.me/projects/lhs2texhl/";
       buildType = "Simple";
       };

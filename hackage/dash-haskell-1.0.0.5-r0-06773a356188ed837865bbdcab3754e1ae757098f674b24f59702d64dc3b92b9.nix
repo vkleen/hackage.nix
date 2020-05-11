@@ -37,14 +37,14 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
       specVersion = "1.18";
       identifier = { name = "dash-haskell"; version = "1.0.0.5"; };
       license = "LGPL-3.0-only";
-      copyright = "(c) 2014 John P. Feltz";
+      copyright = "(c) 2014 John P. Feltz ";
       maintainer = "jfeltz@gmail.com";
       author = "John P. Feltz";
       homepage = "http://www.github.com/jfeltz/dash-haskell";

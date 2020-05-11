@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = { test = true; };
     package = {
@@ -50,7 +50,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       homepage = "https://github.com/nushio3/typelevel-tensor";
       url = "";
       synopsis = "Tensors whose ranks and dimensions type-inferred and type-checked.";
-      description = "A tensor class for Haskell that can type-infer and type-check over tensor ranks and dimensions.";
+      description = "A tensor class for Haskell that can type-infer and type-check over tensor ranks and dimensions.         ";
       buildType = "Simple";
       };
     components = {

@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Hemanth Kapila";
       homepage = "https://github.com/kapilash/hs-azure";
       url = "";
-      synopsis = "Windows Azure ACS";
+      synopsis = "Windows Azure ACS ";
       description = "Haskell wrappers  over REST API for <http://msdn.microsoft.com/en-us/library/hh147631.aspx Windows Azure Active Directory Access Control>.\n\nCurrently only API that is supported is the one to request a password token from ACS via the <http://msdn.microsoft.com/en-us/library/hh674475.aspx OAuth WRAP  protocol>";
       buildType = "Simple";
       };

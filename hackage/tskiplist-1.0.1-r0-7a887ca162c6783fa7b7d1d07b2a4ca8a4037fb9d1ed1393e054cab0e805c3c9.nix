@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -50,7 +50,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       homepage = "https://github.com/pwrobinson/tskiplist#readme";
       url = "";
       synopsis = "A Skip List Implementation in Software Transactional Memory (STM)";
-      description = "This package provides a proof-of-concept implementation of a skip list in STM. A skip list is a probabilistic data structure with dictionary operations and support for efficient range-queries (similarly to Data.Map). In contrast to tree data structures, a skip list does not need any rebalancing, which makes it particularly suitable for concurrent programming. (See: William Pugh. Skip Lists: A Probabilistic Alternative to Balanced Trees.)";
+      description = "This package provides a proof-of-concept implementation of a skip list in STM. A skip list is a probabilistic data structure with dictionary operations and support for efficient range-queries (similarly to Data.Map). In contrast to tree data structures, a skip list does not need any rebalancing, which makes it particularly suitable for concurrent programming. (See: William Pugh. Skip Lists: A Probabilistic Alternative to Balanced Trees.) ";
       buildType = "Simple";
       };
     components = {

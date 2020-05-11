@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -50,7 +50,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       homepage = "http://code.haskell.org/QuickAnnotate/";
       url = "";
       synopsis = "Annotation Framework";
-      description = "A framework introducing annotations by preprocessing. For using it, it is enough to derive 'QuickAnnotate.Annotatable' and then use the preprocessor (qapp). The package contains an example demonstrating this procedure.";
+      description = "A framework introducing annotations by preprocessing. For using it, it is enough to derive 'QuickAnnotate.Annotatable' and then use the preprocessor (qapp). The package contains an example demonstrating this procedure. ";
       buildType = "Simple";
       };
     components = {

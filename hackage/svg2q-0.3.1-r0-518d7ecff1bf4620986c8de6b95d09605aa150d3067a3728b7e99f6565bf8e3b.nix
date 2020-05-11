@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -50,7 +50,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       homepage = "http://www.informatik.uni-kiel.de/~jgr/svg2q";
       url = "";
       synopsis = "Code generation tool for Quartz code from a SVG.";
-      description = "svg2q will generate an Objective C Class from an SVG file which shows the SVG. The Class offers methods to set attributes of those SVG elements that have ids to change looks at runtime. This package is the result of a bachelors thesis and is not yet ready to use for \"normal\" SVGs. Upon request, usability may be improved if spare time is available.";
+      description = "svg2q will generate an Objective C Class from an SVG file which shows the SVG. The Class offers methods to set attributes of those SVG elements that have ids to change looks at runtime. This package is the result of a bachelors thesis and is not yet ready to use for \"normal\" SVGs. Upon request, usability may be improved if spare time is available. ";
       buildType = "Simple";
       };
     components = {

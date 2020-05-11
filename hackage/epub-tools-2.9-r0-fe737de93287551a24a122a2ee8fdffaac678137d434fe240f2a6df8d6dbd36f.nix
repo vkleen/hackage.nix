@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -46,7 +46,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       license = "BSD-3-Clause";
       copyright = "2008-2016 Dino Morelli";
       maintainer = "Dino Morelli <dino@ui3.info>";
-      author = "Dino Morelli";
+      author = "Dino Morelli ";
       homepage = "http://hub.darcs.net/dino/epub-tools";
       url = "";
       synopsis = "Command line utilities for working with epub files";

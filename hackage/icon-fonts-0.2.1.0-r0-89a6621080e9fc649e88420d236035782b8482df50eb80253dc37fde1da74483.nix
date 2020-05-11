@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -50,7 +50,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       homepage = "";
       url = "";
       synopsis = "Package for handling icon fonts in Haskell";
-      description = "This package is intended to provide access to a variety of icon fonts.  Everything is mostly a port of the all-the-icons package for emacs.  The largest difference is that the type system is used to ensure that the user doesn't need to worry about which font produces which icon.";
+      description = "This package is intended to provide access to a variety of icon fonts.  Everything is mostly a port of the all-the-icons package for emacs.  The largest difference is that the type system is used to ensure that the user doesn't need to worry about which font produces which icon.        ";
       buildType = "Simple";
       };
     components = {

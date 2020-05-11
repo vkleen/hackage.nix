@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Thomas Schilling";
       homepage = "http://github.com/nominolo/murmur-hash";
       url = "";
-      synopsis = "MurmurHash2 implementation for";
+      synopsis = "MurmurHash2 implementation for ";
       description = "Implements MurmurHash2, a good, fast, general-purpose,\nnon-cryptographic hashing function.  See\n<http://murmurhash.googlepages.com/> for details.\n\nThis implementation is pure Haskell, so it might be a bit slower\nthan a C FFI binding.";
       buildType = "Simple";
       };

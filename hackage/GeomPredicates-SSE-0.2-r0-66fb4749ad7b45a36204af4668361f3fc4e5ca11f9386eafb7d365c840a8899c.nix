@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Neal Alexander";
       homepage = "";
       url = "";
-      synopsis = "Geometric predicates (Intel SSE)";
+      synopsis = "Geometric predicates (Intel SSE) ";
       description = "Exact, hardware based computation of geometric predicates using an SSE based interval filter and the ESSA algorithm.\nSee \\\"Exact computation of Voronoi diagram and Delaunay triangulation\\\" by Marina Gavrilova, Helmut Ratschek and Jon Rokne.\nThis package is a specialization of the @GeomPredicates@ package and uses it's primitives defined under @Numeric.Geometric.Primitives@.\nThis package requires a CPU with @Streaming SIMD Extensions 2@.";
       buildType = "Simple";
       };

@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -47,10 +47,10 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       copyright = "Universiteit Utrecht";
       maintainer = "Marcos Viera <mviera@fing.edu.uy>";
       author = "";
-      homepage = "http://www.cs.uu.nl/wiki/bin/view/Center/AspectAG";
+      homepage = "http://www.cs.uu.nl/wiki/bin/view/Center/AspectAG ";
       url = "";
       synopsis = "Attribute Grammars in the form of an EDSL";
-      description = "Library of strongly typed Attribute Grammars implemented using type-level programming";
+      description = "Library of strongly typed Attribute Grammars implemented using type-level programming   ";
       buildType = "Simple";
       };
     components = {

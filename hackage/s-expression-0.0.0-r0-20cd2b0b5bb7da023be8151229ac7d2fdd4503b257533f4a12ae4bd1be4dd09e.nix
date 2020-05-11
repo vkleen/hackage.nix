@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Spiros Boosalis";
       homepage = "https://github.com/sboosali/s-expression#readme";
       url = "";
-      synopsis = "simple general-purpose s-expressions";
+      synopsis = "simple general-purpose s-expressions ";
       description = "this package provides general-purpose functionality for manipulating s-expressions. like:\n\n* a @Functor@ instance that transforms the atoms\n\n* a @Monad@ instance that \"expands\" atoms into s-expressions\n\n* a @Foldable@ instance that enumerates the atoms (leaves)\n\n* @IsList@ and @IsString@ instances for literal syntax\n\n*\n\n*\n\n*\n\nthe core type is:\n\n@\ndata <https://hackage.haskell.org/package/s-expression/docs//Data-Sexp.html Sexp> f a\n= Atom a\n| List   [Sexp f a]\n| Sexp f [Sexp f a]\n@\n\nwhich lets you provide your own custom function name that interprets its arguments.\n\ne.g. TODO\n\nfor efficient parsing/printing, use:\n\n* https://hackage.haskell.org/package/sexp\n\n* https://hackage.haskell.org/package/atto-lisp\n";
       buildType = "Simple";
       };

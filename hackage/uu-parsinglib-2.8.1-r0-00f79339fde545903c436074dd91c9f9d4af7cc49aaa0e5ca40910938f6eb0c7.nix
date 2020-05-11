@@ -37,15 +37,15 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
       specVersion = "1.6";
       identifier = { name = "uu-parsinglib"; version = "2.8.1"; };
       license = "MIT";
-      copyright = "S Doaitse Swierstra";
-      maintainer = "Doaitse Swierstra";
+      copyright = "S Doaitse Swierstra ";
+      maintainer = "Doaitse Swierstra      ";
       author = "Doaitse Swierstra, Utrecht University";
       homepage = "http://www.cs.uu.nl/wiki/bin/view/HUT/ParserCombinators";
       url = "";

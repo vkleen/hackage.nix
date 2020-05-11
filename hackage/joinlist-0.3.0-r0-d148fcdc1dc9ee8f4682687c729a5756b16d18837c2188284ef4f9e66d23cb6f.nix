@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "";
       homepage = "http://code.google.com/p/copperbox/";
       url = "";
-      synopsis = "Join list - symmetric list type";
+      synopsis = "Join list - symmetric list type ";
       description = "A JoinList - a list type with with cheap catenation.\n\nGenerally speaking, joinlists have cheap construction (cons,\nsnoc and join aka. append) and expensive manipulation. For most\nuse-cases Data.Sequence is a more appropriate data structure.\n\nChangelog\n\n0.3.0 - Added views as per Data.Sequence and takes and drops.\nChanged show instance to mimic Data.Sequence.\n\n0.2.0 - more operations and some bugfixes (toList...), @wrap@\nrenamed to @singleton@.";
       buildType = "Simple";
       };

@@ -37,19 +37,19 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
       specVersion = "1.10";
       identifier = { name = "bytestring-encodings"; version = "0.2.0.2"; };
       license = "MIT";
-      copyright = "chessai (c) 2018";
+      copyright = "chessai (c) 2018 ";
       maintainer = "chessai1996@gmail.com";
       author = "chessai";
       homepage = "";
       url = "";
-      synopsis = "checks to see if a given bytestring adheres to a certain encoding";
+      synopsis = "checks to see if a given bytestring adheres to a certain encoding ";
       description = "This module provides a family of functions, 'isX', of type @'ByteString' -> 'Bool'@,\nwhich return 'True' if the input ByteString adheres to a certain encoding X,\nand 'False' otherwise.";
       buildType = "Simple";
       };

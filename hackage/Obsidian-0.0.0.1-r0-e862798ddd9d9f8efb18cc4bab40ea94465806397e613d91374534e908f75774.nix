@@ -37,19 +37,19 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
       specVersion = "1.8";
       identifier = { name = "Obsidian"; version = "0.0.0.1"; };
       license = "BSD-3-Clause";
-      copyright = "Copyright (c) 2011-2013 Joel Svensson";
+      copyright = "Copyright (c) 2011-2013 Joel Svensson \t\t  \t\t\t";
       maintainer = "Joel Svensson<svenssonjoel@yahoo.se>";
       author = "Joel Svensson<svenssonjoel@yahoo.se>";
       homepage = "https://github.com/svenssonjoel/Obsidian";
       url = "";
-      synopsis = "Embedded language for GPU Programming";
+      synopsis = "Embedded language for GPU Programming ";
       description = "Obsidian is an embedded language for general purpose programming targeting\nGPU's.";
       buildType = "Simple";
       };

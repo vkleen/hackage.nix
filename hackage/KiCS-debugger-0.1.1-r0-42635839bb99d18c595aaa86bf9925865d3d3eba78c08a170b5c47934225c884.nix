@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Bernd Braßel";
       homepage = "http://curry-language.org";
       url = "";
-      synopsis = "debug features for kics";
+      synopsis = "debug features for kics ";
       description = "This package contains the debugger for the Curry to Haskell compiler \"kics\".";
       buildType = "Custom";
       };

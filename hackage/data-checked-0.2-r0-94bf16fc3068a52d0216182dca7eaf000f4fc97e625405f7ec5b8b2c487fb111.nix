@@ -37,7 +37,7 @@ let
       If this is a Haskell dependency:
       If you are using Stackage, make sure that you are using a snapshot that contains the package. Otherwise you may need to update the Hackage snapshot you are using, usually by updating haskell.nix.
       '';
-in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
+in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, config, ... }:
   {
     flags = {};
     package = {
@@ -49,7 +49,7 @@ in { system, compiler, flags, pkgs, hsPkgs, pkgconfPkgs, ... }:
       author = "Mikhail Vorozhtsov <mikhail.vorozhtsov@gmail.com>";
       homepage = "https://github.com/mvv/data-checked";
       url = "";
-      synopsis = "Type-indexed runtime-checked properties";
+      synopsis = "Type-indexed runtime-checked properties ";
       description = "This package provides a (phantom) type-indexed newtype evidence-wrapper for\nvalues that are checked to satisfy the property associated with the type.";
       buildType = "Simple";
       };
